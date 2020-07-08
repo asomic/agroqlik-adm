@@ -47,7 +47,7 @@ class User extends Authenticatable
         '1'=> ['id'=>'1','name'=>'SUPERADMIN'],
         '2'=> ['id'=>'2','name'=>'ADMIN'],
         '3'=> ['id'=>'3','name'=>'ANALISTA'],
-        '4'=> ['id'=>'4','name'=>'DIGITALIZADOR'],
+        '4'=> ['id'=>'4','name'=>'CAPTURADOR'],
       ];
       return $rawStatus[$value];
     }

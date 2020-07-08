@@ -18,7 +18,9 @@
                     <p>{{$account->razon_social}}</p>
                     <span class="font-bold">Plan</span>
                     <p>{{$account->plan->name}}</p>
-                    <a class="btn btn-success">Editar cuenta</a>
+                    <div class="actions">
+                        <a class="btn btn-success" href="{{route('account.edit',['account'=>$account->id])}}">Editar cuenta</a>
+                    </div>
                 </div>
               </div>
             </div>

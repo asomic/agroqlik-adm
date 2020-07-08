@@ -26,9 +26,9 @@
                         <div class="form-group">
                             <label>Rol</label>
                             <select name="role" class="form-control">
-                                <option value="2" @if($user->role == 2) selected @endif >Administrador</option>
-                                <option value="3" @if($user->role == 3) selected @endif >Analista</option>
-                                <option value="4" @if($user->role == 4) selected @endif >Capturador</option>
+                                <option value="2" @if($user->role['id'] == 2) selected @endif >Administrador</option>
+                                <option value="3" @if($user->role['id'] == 3) selected @endif >Analista</option>
+                                <option value="4" @if($user->role['id'] == 4) selected @endif >Capturador</option>
                             </select>
                         </div>
                         <button class="btn btn-success" type="submit">Agregar</button>

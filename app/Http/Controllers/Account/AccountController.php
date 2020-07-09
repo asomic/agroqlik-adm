@@ -61,7 +61,12 @@ class AccountController extends Controller
     }
 
 
-
+    public function planChange(Request $request, Account $account) 
+    {
+        $account->plan_id = $request->plan;
+        $account->save();
+        return redirect()->route('account.show',['account'=>$account->id]);
+    }
 
 
 }

@@ -17,11 +17,11 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
-
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('account', 'Account\AccountController');
 
-
+Route::post('account/{account}/plan/change', 'Account\AccountController@planChange')->name('account.plan.change');
 
 Route::get('account/{account}/user/create', 'User\UserController@create')->name('user.create');
 Route::post('account/{account}/user', 'User\UserController@store')->name('user.store');

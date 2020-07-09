@@ -16,11 +16,21 @@
                     <p>{{$account->rut_formated}}</p>
                     <span class="font-bold">Razon social</span>
                     <p>{{$account->razon_social}}</p>
-                    <span class="font-bold">Plan</span>
-                    <p>{{$account->plan->name}}</p>
-                    <div class="actions">
-                        <a class="btn btn-success" href="{{route('account.edit',['account'=>$account->id])}}">Editar cuenta</a>
-                    </div>
+                    <form action="{{route('account.plan.change', ['account'=>$account->id])}}" method="POST">
+                        @csrf
+                        <div class="form-group">
+                            <label class="font-bold">Plan</label>
+                            <select name="plan" class="form-control">
+                                <option value="1" @if($account->plan_id == 1) selected @endIf >Plus</option>
+                                <option value="2" @if($account->plan_id == 2) selected @endIf >Profesional</option>
+                                <option value="3" @if($account->plan_id == 3) selected @endIf >Business</option>
+                            </select>
+                        </div>
+ 
+                        <div class="actions">
+                            <button type="submit" class="btn btn-success" >Cambiar plan</button>
+                        </div>
+                    </form>
                 </div>
               </div>
             </div>

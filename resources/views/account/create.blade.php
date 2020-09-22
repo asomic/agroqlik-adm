@@ -4,6 +4,14 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+        <div class="col-12 ">
+            @error('email')
+            <div class="alert alert-danger">Email no valido o ya existente</div>
+            @enderror
+            @error('rut')
+            <div class="alert alert-danger">rRut no valido o ya existente</div>
+            @enderror
+        </div>
         <div class="col-6 ">
             <div class="card">
 

@@ -32,7 +32,7 @@ class AccountController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
         ]);
 
-        dd($validatedData);
+        //dd($validatedData);
         
         $account = new Account;
         $account->rut = $request->rut;

@@ -3,6 +3,12 @@
 
 @section('content')
 <div class="container">
+    @error('email')
+    <div class="alert alert-danger">Email no valido o ya existente</div>
+    @enderror
+    @error('rut')
+    <div class="alert alert-danger">rut no valido o ya existente</div>
+    @enderror
     <div class="row justify-content-center">
         <div class="col-6 ">
             <div class="card">

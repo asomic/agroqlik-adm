@@ -28,9 +28,11 @@ class AccountController extends Controller
     public function store(Request $request) 
     {
         $validatedData = $request->validate([
-            'rut' => ['required', 'unique:accounts'],
+            'rut' => ['required', 'unique:accounts', 'numeric'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
         ]);
+
+        
         
         $account = new Account;
         $account->rut = $request->rut;

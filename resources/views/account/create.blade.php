@@ -9,7 +9,7 @@
             <div class="alert alert-danger">Email no valido o ya existente</div>
             @enderror
             @error('rut')
-            <div class="alert alert-danger">rRut no valido o ya existente</div>
+            <div class="alert alert-danger">Rut no valido o ya existente</div>
             @enderror
         </div>
         <div class="col-6 ">

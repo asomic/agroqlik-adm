@@ -6,10 +6,10 @@
     <div class="row justify-content-center">
         <div class="col-12 ">
             @error('email')
-            <div class="alert alert-danger">Email no valido o ya existente</div>
+            <div class="alert alert-danger">Email no valido o ya existe</div>
             @enderror
             @error('rut')
-            <div class="alert alert-danger">Rut no valido o ya existente</div>
+            <div class="alert alert-danger">Rut no valido o ya existe</div>
             @enderror
         </div>
         <div class="col-6 ">

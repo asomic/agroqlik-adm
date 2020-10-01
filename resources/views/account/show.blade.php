@@ -16,7 +16,8 @@
                     <p>{{$account->rut_formated}}</p>
                     <span class="font-bold">Razon social</span>
                     <p>{{$account->razon_social}}</p>
-
+                    <span class="font-bold">Plan</span>
+                    <p>{{$account->plan->name}}</p>
                     <a  class="btn btn-info" href="{{route('account.edit',['account'=>$account->id])}}">Editar informacion</a>
                     {{-- <form action="{{route('account.plan.change', ['account'=>$account->id])}}" method="POST">
                         @csrf

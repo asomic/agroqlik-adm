@@ -64,7 +64,6 @@ class AccountController extends Controller
     public function update(Request $request, Account $account) 
     {
 
-        $account = new Account;
         $account->rut = $request->rut;
         $account->razon_social = $request->razon;
         $account->status = 1; 

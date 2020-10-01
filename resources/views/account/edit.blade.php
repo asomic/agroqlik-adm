@@ -17,7 +17,7 @@
                         </h4>  
                         <div class="form-group">
                             <label>Rut (sin puntos ni codigo verificador)</label>
-                            <input name="rut" class="form-control" required value="{{$account->rut}}">
+                            <input name="rut" class="form-control"  value="{{$account->rut}}">
                         </div>
                         <div class="form-group">
                             <label>Razon social</label>

@@ -28,7 +28,7 @@ class AccountController extends Controller
     public function store(Request $request) 
     {
         $validatedData = $request->validate([
-            'rut' => ['required', 'unique:accounts', 'numeric'],
+            'rut' => [ 'unique:accounts', 'numeric'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
         ]);
 
@@ -54,6 +54,18 @@ class AccountController extends Controller
         } else {
             return 'error';
         }
+
+    }
+
+    public function edit(Request $request, Account $account) 
+    {
+
+        $account = new Account;
+        $account->rut = $request->rut;
+        $account->razon_social = $request->razon;
+        $account->status = 1; 
+        $account->save();
+        return redirect()->route('account.show',['account'=>$account->id]);
 
     }
 

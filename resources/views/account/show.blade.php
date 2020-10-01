@@ -16,6 +16,8 @@
                     <p>{{$account->rut_formated}}</p>
                     <span class="font-bold">Razon social</span>
                     <p>{{$account->razon_social}}</p>
+
+                    <a  class="btn btn-info" href="{{route('')}}">Editar info</a>
                     <form action="{{route('account.plan.change', ['account'=>$account->id])}}" method="POST">
                         @csrf
                         <div class="form-group">
@@ -29,6 +31,7 @@
  
                         <div class="actions">
                             <button type="submit" class="btn btn-success" >Cambiar plan</button>
+                            
                         </div>
                     </form>
                 </div>

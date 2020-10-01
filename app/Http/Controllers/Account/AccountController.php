@@ -24,9 +24,9 @@ class AccountController extends Controller
     {
         return view('account.create');
     }
-    public function edit() 
+    public function edit(Account $account) 
     {
-        return view('account.edit');
+        return view('account.edit', ['account'=> $account]);
     }
 
     public function store(Request $request) 

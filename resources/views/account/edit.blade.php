@@ -9,7 +9,7 @@
 
                 <div class="card-body">
 
-                    <form action="{{route('account.update')}}" method="POST">
+                    <form action="{{route('account.update',['account'=>$account->id])}}" method="POST">
                         @csrf
                         @method('PUT')
                         <h4>

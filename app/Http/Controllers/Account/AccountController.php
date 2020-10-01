@@ -66,7 +66,7 @@ class AccountController extends Controller
 
         $account->rut = $request->rut;
         $account->razon_social = $request->razon;
-        $account->status = 1; 
+        $account->plan_id = $request->plan;
         $account->save();
         return redirect()->route('account.show',['account'=>$account->id]);
 

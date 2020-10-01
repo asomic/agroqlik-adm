@@ -24,6 +24,10 @@ class AccountController extends Controller
     {
         return view('account.create');
     }
+    public function edit() 
+    {
+        return view('account.edit');
+    }
 
     public function store(Request $request) 
     {
@@ -57,7 +61,7 @@ class AccountController extends Controller
 
     }
 
-    public function edit(Request $request, Account $account) 
+    public function update(Request $request, Account $account) 
     {
 
         $account = new Account;

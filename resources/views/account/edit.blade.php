@@ -34,7 +34,7 @@
                             </select>
                         </div>
 
-                        <button class="btn btn-success" type="submit">Agregar</button>
+                        <button class="btn btn-success" type="submit">Editar</button>
                     </form>
                 </div>
             </div>

@@ -17,8 +17,8 @@
                     <span class="font-bold">Razon social</span>
                     <p>{{$account->razon_social}}</p>
 
-                    <a  class="btn btn-info" href="{{route('account.edit',['account'=>$account->id])}}">Editar info</a>
-                    <form action="{{route('account.plan.change', ['account'=>$account->id])}}" method="POST">
+                    <a  class="btn btn-info" href="{{route('account.edit',['account'=>$account->id])}}">Editar informacion</a>
+                    {{-- <form action="{{route('account.plan.change', ['account'=>$account->id])}}" method="POST">
                         @csrf
                         <div class="form-group">
                             <label class="font-bold">Plan</label>
@@ -33,7 +33,7 @@
                             <button type="submit" class="btn btn-success" >Cambiar plan</button>
                             
                         </div>
-                    </form>
+                    </form> --}}
                 </div>
               </div>
             </div>

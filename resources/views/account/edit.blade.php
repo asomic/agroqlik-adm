@@ -27,6 +27,7 @@
                         <div class="form-group">
                             <label>Plan</label>
                             <select name="plan" class="form-control">
+                                <option value="5" @if($account->plan_id == 5) selected @endif >Plan gratis<option>
                                 <option value="1" @if($account->plan_id == 1) selected @endif >Plan plus<option>
                                 <option value="2" @if($account->plan_id == 2) selected @endif >Plan profesional<option>
                                 <option value="3" @if($account->plan_id == 3) selected @endif >Plan business<option>

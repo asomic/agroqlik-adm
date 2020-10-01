@@ -34,6 +34,7 @@
                         <div class="form-group">
                             <label>Plan</label>
                             <select name="plan" class="form-control">
+                                <option value="5">Plan gratis<option>
                                 <option value="1">Plan plus<option>
                                 <option value="2">Plan profesional<option>
                                 <option value="2">Plan business<option>

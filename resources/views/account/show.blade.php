@@ -39,6 +39,21 @@
               </div>
             </div>
             <div class="col-9">
+                <div class="card pb-4">
+                    <div class="card-header">
+                        <div class="title">
+                            Resumen
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="col-6">
+                            Fundos: {{$account->farmlands->count()}}
+                        </div>
+                        <div class="col-6">
+                            Trabajadores: {{$account->workers->count()}}
+                        </div>
+                    </div>
+                </div>
                 <div class="card">
                     <div class="card-header">
                         <div class="title">

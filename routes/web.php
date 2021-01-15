@@ -27,3 +27,6 @@ Route::get('account/{account}/user/create', 'User\UserController@create')->name(
 Route::post('account/{account}/user', 'User\UserController@store')->name('user.store');
 Route::get('account/{account}/user/{user}', 'User\UserController@edit')->name('user.edit');
 Route::post('account/{account}/user/{user}', 'User\UserController@update')->name('user.update');
+
+
+Route::get('account/{account}/payment', 'Account\PaymentController@create')->name('account.payment.create');

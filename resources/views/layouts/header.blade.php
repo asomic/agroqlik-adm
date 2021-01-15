@@ -20,29 +20,6 @@
             <a class="nav-link" href="{{route('account.index')}}">Cuentas</a>
           </li>
 
-          {{-- <li class="nav-item">
-            <a class="nav-link" href="{{route('farmlands.index')}}">Fundos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{route('workers.index')}}">Trabajadores</a>
-          </li> --}}
-          {{-- <li class="nav-item">
-            <a class="nav-link" href="{{route('config')}}">Configuración</a>
-          </li> --}}
-          {{-- <li class="nav-item">
-            <a class="nav-link" href="/">Reportes</a>
-          </li> --}}
-          {{-- <li class="nav-item">
-            <a class="nav-link"  href="{{route('accounts.index')}}">Clientes</a>
-          </li> --}}
-          {{-- <li class="nav-item">
-            <a class="nav-link"  href="{{route('farmlands.index')}}">Fundos</a>
-          </li> --}}
-
-          {{-- <li class="nav-item">
-            <a class="nav-link"  href="#">Pagos</a>
-          </li>
-           --}}
           @endauth
         </ul>
 

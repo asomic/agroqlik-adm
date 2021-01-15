@@ -7,6 +7,7 @@ use App\Models\Worker\Worker;
 use App\Models\User\User;
 use App\Models\Farmland\Farmland;
 use App\Models\Plan\Plan;
+use App\Models\Account\Payment;
 
 use Freshwork\ChileanBundle\Rut;
 
@@ -44,6 +45,11 @@ class Account extends Model
     public function plan()
     {
       return $this->belongsTo(Plan::class);
+    }
+
+    public function payments()
+    {
+      return $this->hasMany(Payment::class);
     }
 }
 

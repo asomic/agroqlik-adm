@@ -34,6 +34,19 @@
                             </select>
                         </div>
 
+                    
+                        <h4>
+                            Datos de pago
+                        </h4>  
+                        <div class="form-group">
+                            <label>Email de cobro</label>
+                            <input name="payment_email" type="email" class="form-control" value="{{$account->payment_email}}">
+                        </div>
+                        <div class="form-group">
+                            <label>Día de pago</label>
+                            <input name="payment_day" class="form-control" value="{{$account->payment_day}}">
+                        </div>
+
                         <button class="btn btn-success" type="submit">Editar</button>
                     </form>
                 </div>

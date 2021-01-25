@@ -28,5 +28,12 @@ Route::post('account/{account}/user', 'User\UserController@store')->name('user.s
 Route::get('account/{account}/user/{user}', 'User\UserController@edit')->name('user.edit');
 Route::post('account/{account}/user/{user}', 'User\UserController@update')->name('user.update');
 
+//Pagos
+Route::get('/payment', 'Account\PaymentController@index')->name('payment.index');
+Route::get('/payment/{payment}', 'Account\PaymentController@show')->name('payment.show');
 
 Route::get('account/{account}/payment', 'Account\PaymentController@create')->name('account.payment.create');
+Route::post('account/{account}/payment', 'Account\PaymentController@store')->name('account.payment.store');
+// Route::get('account/{account}/payment/payment', 'Account\PaymentController@create')->name('account.payment.create');
+
+

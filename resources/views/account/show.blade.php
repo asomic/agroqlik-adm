@@ -6,53 +6,38 @@
     <div class="row justify-content-center">
         <div class="col-3">
             <div class="card">
-            <div class="card-header">
-                <div class="title">
-                    Cliente
+                <div class="card-header">
+                    <div class="title">
+                        Cliente
+                    </div>
                 </div>
-            </div>
-            <div class="card-body">
-                <span class="font-bold">RUT</span>
-                <p>{{$account->rut_formated}}</p>
-                <span class="font-bold">Razon social</span>
-                <p>{{$account->razon_social}}</p>
-                <span class="font-bold">Plan</span>
-                <p>{{$account->plan->name}}</p>
-                <a  class="btn btn-info" href="{{route('account.edit',['account'=>$account->id])}}">Editar informacion</a>
-                {{-- <form action="{{route('account.plan.change', ['account'=>$account->id])}}" method="POST">
-                    @csrf
-                    <div class="form-group">
-                        <label class="font-bold">Plan</label>
-                        <select name="plan" class="form-control">
-                            <option value="1" @if($account->plan_id == 1) selected @endIf >Plus</option>
-                            <option value="2" @if($account->plan_id == 2) selected @endIf >Profesional</option>
-                            <option value="3" @if($account->plan_id == 3) selected @endIf >Business</option>
-                        </select>
-                    </div>
+                <div class="card-body">
+                    <span class="font-bold">RUT</span>
+                    <p>{{$account->rut_formated}}</p>
+                    <span class="font-bold">Razon social</span>
+                    <p>{{$account->razon_social}}</p>
+                    <span class="font-bold">Plan</span>
+                    <p>{{$account->plan->name}}</p>
+                    <a  class="btn btn-info" href="{{route('account.edit',['account'=>$account->id])}}">Editar informacion</a>
 
-                    <div class="actions">
-                        <button type="submit" class="btn btn-success" >Cambiar plan</button>
-                        
-                    </div>
-                </form> --}}
-            </div>
+                </div>
             </div>
             </br>
             <div class="card pb-4">
-            <div class="card-header">
-                <div class="title">
-                    Resumen
+                <div class="card-header">
+                    <div class="title">
+                        Resumen
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="col-12">
+                        Fundos: {{$account->farmlands->count()}}
+                    </div>
+                    <div class="col-12">
+                        Trabajadores: {{$account->workers->count()}}
+                    </div>
                 </div>
             </div>
-            <div class="card-body">
-                <div class="col-6">
-                    Fundos: {{$account->farmlands->count()}}
-                </div>
-                <div class="col-6">
-                    Trabajadores: {{$account->workers->count()}}
-                </div>
-            </div>
-        </div>
         </br>
         </div>
         <div class="col-9">
@@ -102,7 +87,32 @@
                     </div>  
                 </div>
                 <div class="card-body">
-                    
+                    <span class="font-bold">Email de pago</span>
+                    <p>{{$account->payment_email}}</p>
+                    <span class="font-bold">Día de pago </span>
+                    <p>{{$account->payment_day}}</p>
+                    <table class="table" id="paymentTable">
+                        <thead>
+                            <tr>
+                            <th >Estado</th>
+                            <th >Plan</th>
+                            <th >Servicio</th>
+                            <th >Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($account->payments as $payment)
+                            <tr>
+                                <td>{{$payment->status['text']}}</td> 
+                                <td>{{$payment->plan->name}}</td>
+                                <td>{{$payment->service}}</td>
+                                <td>
+                                    <a class="btn btn-success" href="{{route('payment.show', ['payment' => $payment->id])}}">ver</a>
+                                </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
             </div>
             

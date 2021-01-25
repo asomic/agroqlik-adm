@@ -19,7 +19,9 @@
           <li class="nav-item">
             <a class="nav-link" href="{{route('account.index')}}">Cuentas</a>
           </li>
-
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('payment.index')}}">Pagos</a>
+          </li>
           @endauth
         </ul>
 

@@ -56,6 +56,19 @@
                             <input name="last_name" class="form-control" > 
                         </div>
 
+                        <h4>
+                            Datos de pago
+                        </h4>  
+                        <div class="form-group">
+                            <label>Email de cobro</label>
+                            <input name="payment_email" type="email" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label>Día de pago</label>
+                            <input name="payment_day" class="form-control" >
+                        </div>
+
+
                         <button class="btn btn-success" type="submit">Agregar</button>
                     </form>
                 </div>

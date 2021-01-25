@@ -43,6 +43,8 @@ class AccountController extends Controller
         $account->razon_social = $request->razon;
         $account->plan_id = $request->plan;
         $account->status = 1; 
+        $account->payment_email = $request->payment_email; 
+        $account->payment_day = $request->payment_day; 
         if($account->save()) {
 
             $user = new User; 
@@ -67,6 +69,8 @@ class AccountController extends Controller
         $account->rut = $request->rut;
         $account->razon_social = $request->razon;
         $account->plan_id = $request->plan;
+        $account->payment_email = $request->payment_email; 
+        $account->payment_day = $request->payment_day; 
         $account->save();
         return redirect()->route('account.show',['account'=>$account->id]);
 

@@ -16,49 +16,40 @@
             <div class="card">
 
                 <div class="card-body">
-                    creando pago
-{{-- 
-                    <form action="{{route('account.store')}}" method="POST">
+
+                    <form action="{{route('account.payment.store', ['account' => $account->id])}}" method="POST">
                         @csrf
                         <h4>
-                            Informacion de la cuenta 
+                            Generar cobro                        
                         </h4>  
-                        <div class="form-group">
-                            <label>Rut (sin puntos ni codigo verificador)</label>
-                            <input name="rut" class="form-control" >
-                        </div>
-                        <div class="form-group">
-                            <label>Razon social</label>
-                            <input name="razon" class="form-control" required>
-                        </div>
-
                         <div class="form-group">
                             <label>Plan</label>
                             <select name="plan" class="form-control">
-                                <option value="5">Plan gratis<option>
-                                <option value="1">Plan plus<option>
-                                <option value="2">Plan profesional<option>
-                                <option value="2">Plan business<option>
+                                <option value="1">Plan plus</option>
+                                <option value="2">Plan profesional</option>
+                                <option value="3">Plan business</option>
                             </select>
                         </div>
-                        <h4>
-                            Usuario administrador
-                        </h4>  
                         <div class="form-group">
-                            <label>Email (usuario)</label>
-                            <input name="email" type="email" class="form-control" required>
+                            <label>Servicio</label>
+                            <input name="service" class="form-control" required type="text">
                         </div>
                         <div class="form-group">
-                            <label>Nombre</label>
-                            <input name="first_name" class="form-control" >
+                            <label>Valor</label>
+                            <input name="amount" class="form-control" required type="number">
                         </div>
                         <div class="form-group">
-                            <label>Apellido</label>
-                            <input name="last_name" class="form-control" > 
+                            <label>Fecha vencimiento - Dia de pago de la cuenta:({{$account->payment_day}}) </label>
+                            <input name="expiration" class="form-control" required type="date">
                         </div>
 
-                        <button class="btn btn-success" type="submit">Agregar</button>
-                    </form> --}}
+                        <div class="form-group">
+                            <label>Email para cobro</label>
+                            <input name="email" type="email" class="form-control" required value="{{$account->payment_email}}">
+                        </div>
+
+                        <button class="btn btn-success" type="submit">Cobrar</button>
+                    </form>
                 </div>
             </div>
             

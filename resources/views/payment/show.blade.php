@@ -30,8 +30,10 @@
                     </div>
                 </div>
                 <div class="card-body">
+                    <span class="font-bold">Estado</span>
+                    <p>{{$payment->status['text']}}</p>
                     <span class="font-bold">Plan</span>
-                    <p>{{$payment->plan_id}}</p>
+                    <p>{{$payment->plan->name}}</p>
                     <span class="font-bold">Servicio</span>
                     <p>{{$payment->service}}</p>
                     <span class="font-bold">Fecha creacion</span>

@@ -21,7 +21,6 @@ class Account extends Model
       } else {
         return 'sin rut';
       }
-      
     }
     
     public function workers()

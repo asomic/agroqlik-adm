@@ -15,8 +15,13 @@ use Freshwork\ChileanBundle\Rut;
 class Account extends Model
 {
     public function getRutFormatedAttribute()
-    {
-      return Rut::set($this->rut)->fix()->format(); 
+    { 
+      if($this->rut) {
+        return Rut::set($this->rut)->fix()->format(); 
+      } else {
+        return 'sin rut';
+      }
+      
     }
     
     public function workers()
